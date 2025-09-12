@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Black & Blue Blurred Background</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #000;
+            color: #fff;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        
+        .blue-top {
+            position: absolute;
+            top: -25vh;
+            left: -10%;
+            width: 120%;
+            height: 40vh;
+            background: linear-gradient(135deg, #0066ff 0%, #0033aa 10%);
+            border-radius: 50%;
+            filter: blur(250px);
+            opacity: 0.8;
+        }
+        
+        .blue-bottom {
+            position: absolute;
+            bottom: -25vh;
+            right: -10%;
+            width: 120%;
+            height: 40vh;
+            background: linear-gradient(135deg, #0033aa 0%, #0066ff 100%);
+            border-radius: 50%;
+            filter: blur(250px);
+            opacity: 0.8;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            margin-bottom: 60px;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            color: #fff;
+            text-shadow: 0 0 10px rgba(0, 100, 255, 0.5);
+        }
+        
+        .logo span {
+            color: #0066ff;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+        
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            position: relative;
+        }
+        
+        nav a:hover {
+            color: #0066ff;
+        }
+        
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #0066ff;
+            transition: width 0.3s;
+        }
+        
+        nav a:hover::after {
+            width: 100%;
+        }
+        
+        .hero {
+            text-align: center;
+            margin: 80px 0 120px;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 0 0 15px rgba(0, 100, 255, 0.5);
+        }
+        
+        .hero p {
+            font-size: 1.5rem;
+            color: #aaa;
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+        
+        .highlight {
+            color: #0066ff;
+            font-weight: 700;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            padding: 15px 40px;
+            background: linear-gradient(45deg, #0066ff, #0033aa);
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 1.2rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 5px 15px rgba(0, 100, 255, 0.4);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 100, 255, 0.6);
+        }
+        
+        .features {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin: 100px 0;
+        }
+        
+        .feature-card {
+            background: rgba(20, 20, 40, 0.6);
+            border-radius: 15px;
+            padding: 30px;
+            width: 300px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(0, 100, 255, 0.3);
+            transition: transform 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .feature-icon {
+            font-size: 40px;
+            color: #0066ff;
+            margin-bottom: 20px;
+        }
+        
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .scroll-down {
+            text-align: center;
+            margin: 80px 0;
+            color: #aaa;
+        }
+        
+        .scroll-down i {
+            color: #0066ff;
+            font-size: 2rem;
+            margin-top: 15px;
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-20px);
+            }
+            60% {
+                transform: translateY(-10px);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            nav ul {
+                gap: 15px;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .features {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="background">
+        <div class="blue-top"></div>
+        <div class="blue-bottom"></div>
+    </div>
+    
+    <div class="container">
+        <header>
+            <div class="logo"><span>Vipooshan.io</span></div>
+            <nav>
+                <ul>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Education</a></li>
+                    <li><a href="#">Skills</a></li>
+                    <li><a href="#">Achievements</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <section class="hero">
+            <h1>Balachandran Vipooshan</h1>
+            <p>Computer Science <span class="highlight">Undergraduate</span> </p>
+            <a href="#" class="cta-button">Contact</a>
+        </section>
+        
+        <div class="features">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h3>Web Development</h3>
+                <p>Modern, responsive websites built with the latest technologies</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <h3>App Development</h3>
+                <p>Cross-platform mobile applications for iOS and Android</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-paint-brush"></i>
+                </div>
+                <h3>UI/UX Design</h3>
+                <p>Beautiful and intuitive user interfaces with exceptional experiences</p>
+            </div>
+        </div>
+        
+        <div class="scroll-down">
+            <p>Scroll Down to be Amazed</p>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </div>
+
+    <script>
+        // Simple parallax effect for background elements
+        document.addEventListener('mousemove', (e) => {
+            const blueTop = document.querySelector('.blue-top');
+            const blueBottom = document.querySelector('.blue-bottom');
+            
+            const moveX = (e.clientX - window.innerWidth / 2) / 25;
+            const moveY = (e.clientY - window.innerHeight / 2) / 25;
+            
+            blueTop.style.transform = `translate(${moveX}px, ${moveY}px)`;
+            blueBottom.style.transform = `translate(${-moveX}px, ${-moveY}px)`;
+        });
+    </script>
+</body>
+</html>
