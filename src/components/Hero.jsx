@@ -11,11 +11,7 @@ const Hero = () => {
 
   return (
     <div className="portfolio">
-      {/* Background */}
-      <div className="background">
-        <div className="blue-top"></div>
-        <div className="blue-bottom"></div>
-      </div>
+      
 
       <div className="container">
         {/* Navbar */}

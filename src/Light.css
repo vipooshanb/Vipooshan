@@ -1,0 +1,38 @@
+body.light {
+    background: linear-gradient(135deg, #f0f4ff 0%, #d9e4ff 100%);
+    color: black;
+    
+    .navbar{
+        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.532);
+    }
+    .nav-links a {
+        color: #000000;
+    }
+    .logo {
+        color: #000000;
+    }
+    .logo:hover {
+        text-shadow: 0 0 10px rgba(0, 0, 0, 0.604);
+    }
+    .hamburger span {
+        background-color: #000000;
+    }
+
+
+
+    .about-title {
+        color: #0033aa;
+    }
+    .about-text {
+        color: #343434;
+    }
+    .stat {
+        background: rgba(0, 0, 0, 0.897);
+    }
+    .stat:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 102, 255, 0.715);
+    }
+
+}
+
