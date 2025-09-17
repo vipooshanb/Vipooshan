@@ -31,7 +31,10 @@ const Contact = () => {
     setStatus("Sending...");
 
     try {
-      const res = await axios.post("http://localhost:5000/send", formData);
+      // Use environment variable for backend URL
+      const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
+      const res = await axios.post(`${BACKEND_URL}/send`, formData);
+
       if (res.data.success) {
         setStatus("Message sent successfully!");
         setFormData({ name: "", email: "", subject: "", message: "", phone: "" });
