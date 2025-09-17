@@ -3,7 +3,10 @@
             padding: 0;
             box-sizing: border-box;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          scroll-behavior: smooth;
+
         }
+
         
         body {
           color: #fff;
@@ -159,6 +162,7 @@
         }
         
         .hero {
+            height: 100svh; /* Full viewport height */
             height: 100vh; /* Full viewport height */
             display: flex;
             flex-direction: column;
