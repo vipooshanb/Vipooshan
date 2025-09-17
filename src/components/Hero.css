@@ -163,7 +163,7 @@
         
         .hero {
             height: 100svh; /* Full viewport height */
-            height: 100vh; /* Full viewport height */
+            height: 90vh; /* Full viewport height */
             display: flex;
             flex-direction: column;
             justify-content: center; /* Center vertically */
