@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Hero.css"; // import the CSS
 import { FaLinkedinIn, FaGithub, FaInstagram} from "react-icons/fa";
+import { FaChevronDown } from "react-icons/fa";
 
 const Hero = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -66,15 +67,18 @@ const Hero = () => {
           <a href="#contact" className="cta-button">
             Contact Me
           </a>
-        </section>
 
         {/* Scroll Down */}
         <a href="#about" className="scroll-down">
-          Scroll Down
-          <i className="fas fa-chevron-down"></i>
+          <br />
+          
+          <i className="Fa-chevron-down"><FaChevronDown className="text-xl text-gray-500" /></i>
         </a>
+        </section>
+
       </div>
     </div>
+    
   );
 };
 
