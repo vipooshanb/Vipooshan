@@ -30,9 +30,180 @@ body.light {
         background: rgba(0, 0, 0, 0.897);
     }
     .stat:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 102, 255, 0.715);
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 102, 255, 0.715);
     }
+    .section-title {
+        color: #0033aa;
+    }
+    .category-filter button {
+            color: rgb(255, 255, 255);
+            font-weight: 900;
+            background-color: rgba(0, 0, 0, 0.7);
+    }
+    .category-filter button:hover {
+        background-color: rgba(40, 40, 40, 0.9);
+        border-color: rgba(53, 9, 229, 0.889);
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgb(7, 0, 209);
+    }
+    .netflix-card {
+            background-color: rgba(0, 0, 0, 0.6);
+    }
+    .tech {
+        color: #ffffff;
+    }
+    .edu-card {
+        background: rgba(0, 0, 0, 0.614);
+    }
+    .edu-card-header {
+        background: linear-gradient(to right, #00000065, #0033aaa1);
+    }
+    .edu-degree {
+        color: #ffffff;
+    }
+    .edu-badge {
+        background: linear-gradient(to right, #000000ad, #0033aa9c);
+        color: #ffffff;
+    }
+    .edu-features-list li {
+        color: #ffffff;
+    }
+    .edu-section-title {
+        color: #0033aa;
+    }
+    .edu-section-title::after {
+        background: linear-gradient(to right, #0066ff, #0033aa);
+    }
+    .skills-title {
+        color: #0033aa;
+    }
+    .skills-title::after {
+        background: linear-gradient(to right, #0066ff, #0033aa);
+    }
+    .skill-card {
+        background: rgba(255, 255, 255, 0.6);
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        box-shadow: 0 5px 15px rgba(2, 4, 128, 0.766);
+        color: #000000;
+    }
+    .skill-card:hover {
+        border-color: rgba(6, 34, 213, 0.607);
+    }
+    
+    .skill-icon {
+        background: rgba(227, 228, 231, 0.897);
+    }
+    
+    .skill-name {
+        color: #000000;
+    }
+    .cer-section-title {
+        color: #0033aa;
+    }
+    .cer-section-title::after {
+        background: linear-gradient(to right, #0066ff, #0033aa);
+    }
+    .certification-card {
+        background: rgba(31, 22, 22, 0.075);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.766);
+        color: #000000;
+    }
+    .certificate-title {
+        color: #0033aa;
+        font-weight: 700;
+    }
+    .certificate-issuer, .certificate-date {
+        color: #000000;
+        font-weight: 600;
+    }
+    .contact-title {
+        color: #0033aa;
+    }
+        .contact-text {
+            color: #000;
+            font-weight:bold;
+        }
+        .contact-details h4 {
+            color: #000;
+            font-weight: bold;
+        }
+        .contact-details p {
+            color: #0033aa;
+            font-weight: bold;
+        }
+        .contact-social a {
+            background: rgba(0, 0, 0, 0.1);
+            color: #000;
+        }
+        .contact-social a:hover {
+            background: #0066ff;
+            color: #fff;
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 100, 255, 0.4);
+        }
+        .form-group label {
+            color: #000000;
+        }
+        .contact-form {
+            background: rgba(255, 255, 255, 0.111);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            color: #000;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(0, 0, 0, 0.507);
+            border-radius: 10px;
+            color: #000000;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+        .footer-heading {
+            color: #0033aa;
+        }
+        .footer-text {
+            color: #000000;
+        }
+        .footer-social a {
+            background: rgba(0, 0, 0, 0.1);
+            color: #000000;
+        }
+        .footer-social a:hover {
+            background: #0066ff;
+            color: #fff;
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 100, 255, 0.4);
+        }
+        .footer-links a {
+            color: #000000;
+        }
+        .search-box {
+            background: rgba(31, 22, 22, 0.075);
+            border: 1px solid rgba(0, 0, 0, 0.205);
+        }
+        .search-box input {
+            background: transparent;
+            color: #000000;
+        }
+        .copyright {
+            color: #000000;
+        }
+        .footer-info {
+            color: #000000;
+        }
+
+
+
+
+
+
+
+
+
+
 
 }
 

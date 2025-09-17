@@ -62,7 +62,7 @@ const certificationsData = [
 const Certifications = ({ viewCertificate }) => {
   return (
     <section className="certifications-section" id="certifications">
-      <h2 className="section-title">Certifications</h2>
+      <h2 className="cer-section-title">Certifications</h2>
       <div className="certifications-container">
         {certificationsData.map((cert, index) => (
           <div
