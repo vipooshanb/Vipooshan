@@ -54,15 +54,11 @@ const Contact = () => {
           </div>
 
           <div className="contact-social">
-            <a href="#" title="LinkedIn">
-              <FaLinkedinIn />
-            </a>
-            <a href="#" title="GitHub">
-              <FaGithub />
-            </a>
-            <a href="#" title="Instagram">
-              <FaInstagram />
-            </a>
+            <a href="https://www.linkedin.com/in/balachandran-vipooshan-087b3733b/"><FaLinkedinIn /></a>
+            <a href="https://github.com/vipooshanb"><FaGithub /></a>
+            <a href="https://www.instagram.com/vipooshanb_27/"><FaInstagram /></a>
+            
+            
             <a href="#" title="Twitter">
               <FaTwitter />
             </a>

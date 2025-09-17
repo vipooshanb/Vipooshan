@@ -51,9 +51,9 @@ const Hero = () => {
             </a>
 
             <div className="social-icons">
-                <a href="#"><FaLinkedinIn /></a>
-                <a href="#"><FaGithub /></a>
-                <a href="#"><FaInstagram /></a>
+                <a href="https://www.linkedin.com/in/balachandran-vipooshan-087b3733b/"><FaLinkedinIn /></a>
+                <a href="https://github.com/vipooshanb"><FaGithub /></a>
+                <a href="https://www.instagram.com/vipooshanb_27/"><FaInstagram /></a>
             </div>
           </div>
         </nav>

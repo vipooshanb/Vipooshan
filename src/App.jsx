@@ -9,7 +9,6 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import "./Dark.css";  // Dark mode styles
 import "./Light.css"; // Light mode styles
-import LanguageSelector from "./components/LanguageSelector"; // adjust path if needed
 
 
 function App() {
@@ -85,7 +84,6 @@ function App() {
       <Certifications />
       <Contact />
       <Footer />
-      <LanguageSelector />
 
     </div>
   );

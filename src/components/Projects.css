@@ -1,7 +1,13 @@
+.projects-section{
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
 .section-title {
             font-size: 2rem;
             font-weight: 800;
-            color: var(--netflix-white);
+            color: white;
             margin-bottom: 40px;
             position: relative;
             letter-spacing: 1px;

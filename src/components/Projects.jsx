@@ -20,9 +20,9 @@ const projects = [
     category: "web",
     bgColor: "#2a3f5d",
     description:
-      "Ticketing system with a React frontend and Spring Boot backend for real-time operations. Features include seat selection, payment processing, and ticket management.",
-    github: "#",
-    live: "#",
+      "This is a desktop-based Task Management System designed using Python and Tkinter for the graphical user interface. It helps users add, view, update, and delete their tasks in an organized manner. All task data is persistently stored in a JSON file using Python dictionaries, ensuring structured and reliable task tracking.",
+    github: "https://github.com/vipooshanb/Task-Management-System---GUI",
+    live: "https://github.com/vipooshanb/Task-Management-System---GUI",
   },
   {
     title: "Front-End Development",
@@ -32,8 +32,8 @@ const projects = [
     bgColor: "#4d2a4d",
     description:
       "Ticketing system with a React frontend and Spring Boot backend for real-time operations. Features include seat selection, payment processing, and ticket management.",
-    github: "#",
-    live: "#",
+    github: "https://github.com/vipooshanb/Aqua_verse",
+    live: "https://aqua-verse-alpha.vercel.app/",
   },
   {
     title: "My Portfolio Website",
@@ -43,8 +43,8 @@ const projects = [
     bgColor: "#2a4d3f",
     description:
       "Scalable Java-based application for managing flight operations and passenger seating with real-time updates, reservation system, and admin dashboard.",
-    github: "#",
-    live: "#",
+    github: "https://github.com/vipooshanb/Vipooshan-Portfolio",
+    live: "https://vipooshan.vercel.app/",
   },
   {
     title: "Portfolio Website Testing",

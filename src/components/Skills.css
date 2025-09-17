@@ -1,7 +1,8 @@
-       .skills-section {
+    .skills-section {
         width: 100%;
         max-width: 1200px;
-        padding: 60px 5%;
+        padding: 100px 5%;
+        padding-bottom: 200px;
         margin: 0 auto;
     }
     

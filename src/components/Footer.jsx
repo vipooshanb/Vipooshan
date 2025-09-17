@@ -45,9 +45,9 @@ const Footer = () => {
           <h3 className="footer-heading">Balachandran Vipooshan</h3>
           <p className="footer-text">Computer Science undergraduate</p>
           <div className="footer-social">
-            <a href="#"><FaLinkedinIn /></a>
-            <a href="#"><FaGithub /></a>
-            <a href="#"><FaInstagram /></a>
+                <a href="https://www.linkedin.com/in/balachandran-vipooshan-087b3733b/"><FaLinkedinIn /></a>
+                <a href="https://github.com/vipooshanb"><FaGithub /></a>
+                <a href="https://www.instagram.com/vipooshanb_27/"><FaInstagram /></a>
           </div>
         </div>
 

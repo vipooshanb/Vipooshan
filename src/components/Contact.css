@@ -1,5 +1,6 @@
-            .contact-section {
+        .contact-section {
             padding: 100px 5%;
+            padding-bottom: 100px;
             position: relative;
             overflow: hidden;
         }
