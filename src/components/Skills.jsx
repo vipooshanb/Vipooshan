@@ -1,6 +1,5 @@
-// Skills.jsx
 import React from "react";
-import "./Skills.css"; // keep your CSS as is
+import "./Skills.css";
 import { 
   FaJava, 
   FaPython, 
@@ -9,36 +8,119 @@ import {
   FaHtml5, 
   FaCss3Alt, 
   FaJsSquare, 
-  FaReact, 
-  FaPalette 
+  FaReact,
+  FaDocker
 } from "react-icons/fa";
-import { SiMysql, SiMongodb, SiTailwindcss } from "react-icons/si";
-
-const skills = [
-  { name: "Java", icon: <FaJava /> },
-  { name: "Python", icon: <FaPython /> },
-  { name: "Git", icon: <FaGitAlt /> },
-  { name: "GitHub", icon: <FaGithub /> },
-  { name: "HTML", icon: <FaHtml5 /> },
-  { name: "CSS", icon: <FaCss3Alt /> },
-  { name: "JavaScript", icon: <FaJsSquare /> },
-  { name: "MySQL", icon: <SiMysql /> },
-  { name: "MongoDB", icon: <SiMongodb /> },
-  { name: "React", icon: <FaReact /> },
-  { name: "Tailwind CSS", icon: <SiTailwindcss /> },
-];
+import { 
+  SiMysql, 
+  SiMongodb, 
+  SiTailwindcss, 
+  SiNodedotjs, 
+  SiExpress, 
+  SiFlutter, 
+  SiFigma, 
+  SiPostman 
+} from "react-icons/si";
 
 const Skills = () => {
+  const skillCategories = [
+    {
+      title: "Frontend",
+      skills: [
+        { name: "HTML", icon: <FaHtml5 /> },
+        { name: "CSS", icon: <FaCss3Alt /> },
+        { name: "JavaScript", icon: <FaJsSquare /> },
+        { name: "Tailwind CSS", icon: <SiTailwindcss /> },
+        { name: "React", icon: <FaReact /> },
+        { name: "Flutter", icon: <SiFlutter /> },
+        { name: "Figma", icon: <SiFigma /> }
+      ]
+    },
+    {
+      title: "Backend",
+      skills: [
+        { name: "Python", icon: <FaPython /> },
+        { name: "Java", icon: <FaJava /> },
+        { name: "Node.js", icon: <SiNodedotjs /> },
+        { name: "Express.js", icon: <SiExpress /> }
+      ]
+    },
+    {
+      title: "Database",
+      skills: [
+        { name: "MySQL", icon: <SiMysql /> },
+        { name: "MongoDB", icon: <SiMongodb /> }
+      ]
+    },
+    {
+      title: "Tools",
+      skills: [
+        { name: "Git", icon: <FaGitAlt /> },
+        { name: "GitHub", icon: <FaGithub /> },
+        { name: "Docker", icon: <FaDocker /> },
+        { name: "Postman", icon: <SiPostman /> }
+      ]
+    }
+  ];
+
   return (
     <section className="skills-section" id="skills">
       <h2 className="skills-title">Technical Skills</h2>
-      <div className="skills-container">
-        {skills.map((skill, index) => (
-          <div key={index} className="skill-card">
-            <div className="skill-icon">{skill.icon}</div>
-            <h3 className="skill-name">{skill.name}</h3>
+      
+      <div className="skills-grid">
+        {/* First Row: Frontend & Backend */}
+        <div className="skills-row">
+          <div className="skill-category">
+            <h3 className="category-title">{skillCategories[0].title}</h3>
+            <div className="skills-container">
+              {skillCategories[0].skills.map((skill, index) => (
+                <div key={index} className="skill-card">
+                  <div className="skill-icon">{skill.icon}</div>
+                  <h4 className="skill-name">{skill.name}</h4>
+                </div>
+              ))}
+            </div>
           </div>
-        ))}
+          
+          <div className="skill-category">
+            <h3 className="category-title">{skillCategories[1].title}</h3>
+            <div className="skills-container">
+              {skillCategories[1].skills.map((skill, index) => (
+                <div key={index} className="skill-card">
+                  <div className="skill-icon">{skill.icon}</div>
+                  <h4 className="skill-name">{skill.name}</h4>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+        
+        {/* Second Row: Database & Tools */}
+        <div className="skills-row">
+          <div className="skill-category">
+            <h3 className="category-title">{skillCategories[2].title}</h3>
+            <div className="skills-container">
+              {skillCategories[2].skills.map((skill, index) => (
+                <div key={index} className="skill-card">
+                  <div className="skill-icon">{skill.icon}</div>
+                  <h4 className="skill-name">{skill.name}</h4>
+                </div>
+              ))}
+            </div>
+          </div>
+          
+          <div className="skill-category">
+            <h3 className="category-title">{skillCategories[3].title}</h3>
+            <div className="skills-container">
+              {skillCategories[3].skills.map((skill, index) => (
+                <div key={index} className="skill-card">
+                  <div className="skill-icon">{skill.icon}</div>
+                  <h4 className="skill-name">{skill.name}</h4>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );

@@ -84,7 +84,7 @@ body.light {
     .skill-card {
         background: rgba(255, 255, 255, 0.6);
         border: 1px solid rgba(0, 0, 0, 0.1);
-        box-shadow: 0 5px 15px rgba(2, 4, 128, 0.766);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.766);
         color: #000000;
     }
     .skill-card:hover {
@@ -98,6 +98,17 @@ body.light {
     .skill-name {
         color: #000000;
     }
+    .skill-card {
+        background: rgba(0, 0, 0, 0.353);
+    }
+    .skill-name {
+        color: #0400ff94;
+    }
+    .category-title {
+        color: #0d0d0d;
+    }
+
+
     .cer-section-title {
         color: #0033aa;
     }
