@@ -58,7 +58,7 @@ const About = () => {
                 <FaUniversity size={24} color="#0066ff" />
             </div>
             <div className="stat-number">
-              Informatics Institute of Technology
+              University Of Westminster
             </div>
             <div className="stat-text">University</div>
           </div>
