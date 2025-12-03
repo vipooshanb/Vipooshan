@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
-import Hero from "./components/Hero";
-import About from "./components/About";
-import Projects from "./components/Projects";
-import Education from "./components/Education";
-import Certifications from "./components/Certifications";
-import Skills from "./components/Skills";
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
+import Hero from "./components/pages/Hero";
+import About from "./components/pages/About";
+import Projects from "./components/pages/Projects";
+import Education from "./components/pages/Education";
+import Certifications from "./components/pages/Certifications";
+import Skills from "./components/pages/Skills";
+import Contact from "./components/pages/Contact";
+import Footer from "./components/pages/Footer";
 import "./Dark.css";  // Dark mode styles
 import "./Light.css"; // Light mode styles
 

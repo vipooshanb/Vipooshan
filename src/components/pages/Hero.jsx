@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import "./Hero.css"; // import the CSS
+import "../styles/Hero.css"; // import the CSS
 import { FaLinkedinIn, FaGithub, FaInstagram} from "react-icons/fa";
 import { FaChevronDown } from "react-icons/fa";
+import AiAssistant from "./AiAssistant";
 
 const Hero = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -77,8 +78,8 @@ const Hero = () => {
         </section>
 
       </div>
+      <AiAssistant />
     </div>
-    
   );
 };
 

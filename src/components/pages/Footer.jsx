@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import "./Footer.css";
+import "../styles/Footer.css"; // Fixed path to the CSS file
 import { FaLinkedinIn, FaGithub, FaInstagram, FaCloudSun, FaSearch } from "react-icons/fa";
 
 const Footer = () => {

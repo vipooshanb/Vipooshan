@@ -1,6 +1,6 @@
 // Projects.jsx
 import React, { useState } from "react";
-import "./Projects.css";
+import "../styles/Projects.css"; // Assuming you have a CSS file for styling
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
 const categories = [
@@ -56,6 +56,28 @@ const projects = [
       "Automated testing suite for the portfolio website, ensuring functionality and performance across different browsers and devices.",
     github: "#",
     live: "#",
+  },
+  {
+    title: "Mozhii.AI (Tamil LLM)",
+    year: "2025 November",
+    tech: "Next.js, TypeScript",
+    category: "Full-Stack web web-mobile",
+    bgColor: "#2a4d3f",
+    description:
+      "Landing page for Mozhii.AI, an AI assistant platform, built with Next.js and TypeScript for optimal performance and SEO.",
+    github: "https://github.com/Mozhii-LLM/Mozhii",
+    live: "https://www.mozhii.online",
+  },
+  {
+    title: "Mozhii.AI - Sri Lanka's Tamil Large Language Model",
+    year: "2025 Ongoing...",
+    tech: "Python, PyTorch, Transformers, FastAPI, QLoRA",
+    category: "Full-Stack web web-mobile",
+    bgColor: "#2a4d3f",
+    description:
+      "Landing page for Mozhii.AI, an AI assistant platform, built with Next.js and TypeScript for optimal performance and SEO.",
+    github: "https://github.com/Mozhii-LLM/Mozhii",
+    live: "https://www.mozhii.online",
   },
 ];
 

@@ -1,5 +1,5 @@
 import React from "react";
-import "./Skills.css";
+import "../styles/Skills.css"; // Assuming you have a CSS file for styling
 import { 
   FaJava, 
   FaPython, 

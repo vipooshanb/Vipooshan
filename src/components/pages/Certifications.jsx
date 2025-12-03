@@ -1,17 +1,17 @@
 // Certifications.jsx
 import React from "react";
 import { FaBuilding, FaCalendarAlt } from "react-icons/fa";
-import "./Certifications.css"; // Keep your existing CSS
+import "../styles/Certifications.css"; // Keep your existing CSS
 
 
 
 
-import Python from "../assets/UOM.png";
-import Figma from "../assets/Figma.png";
-import Project from "../assets/Project-Managment.png";
-import Testing from "../assets/Testing.png";
-import Web from "../assets/UOM-2.png";
-import Hack from "../assets/Hack.png";
+import Python from "../../assets/UOM.png";
+import Figma from "../../assets/Figma.png";
+import Project from "../../assets/Project-Managment.png";
+import Testing from "../../assets/Testing.png";
+import Web from "../../assets/UOM-2.png";
+import Hack from "../../assets/Hack.png";
 
 
 const certificationsData = [
@@ -55,7 +55,7 @@ const certificationsData = [
     title: "Problem Solving Basic",
     image: Hack,
     issuer: "Hacker Rank",
-    date: "February 2025",
+    date: "February 2035",
   },
 ];
 

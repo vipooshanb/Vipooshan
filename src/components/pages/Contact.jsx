@@ -9,7 +9,7 @@ import {
   FaInstagram,
   FaTwitter,
 } from "react-icons/fa";
-import "./Contact.css";
+import "../styles/Contact.css";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -31,8 +31,9 @@ const Contact = () => {
     setStatus("Sending...");
 
     try {
-      // Use environment variable for backend URL
-      const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
+  // Use Vite environment variable for backend URL (VITE_BACKEND_URL)
+  // Fallback to empty string so requests go to the same origin when not set
+  const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || "";
       const res = await axios.post(`${BACKEND_URL}/send`, formData);
 
       if (res.data.success) {

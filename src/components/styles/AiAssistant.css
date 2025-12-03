@@ -1,0 +1,61 @@
+.ai-assistant {
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  z-index: 1500;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.ai-toggle {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg,#0066ff,#0033aa);
+  color: #fff;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+  cursor: pointer;
+}
+
+.ai-panel {
+  width: 320px;
+  max-height: 420px;
+  background: rgba(10,10,10,0.95);
+  color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  display: none;
+  flex-direction: column;
+  margin-top: 12px;
+}
+
+.ai-assistant.open .ai-panel {
+  display: flex;
+}
+
+.ai-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 12px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.ai-title { display:flex; gap:8px; align-items:center; font-weight:700 }
+.ai-title svg { color:#ffd54f }
+.ai-messages { padding: 12px; overflow:auto; flex:1 }
+.ai-message { margin-bottom: 10px; max-width: 85% }
+.ai-message.user { margin-left: auto; text-align: right }
+.ai-message.bot { margin-right: auto }
+.ai-msg-text { padding: 8px 12px; border-radius: 12px; background: rgba(255,255,255,0.06) }
+.ai-message.user .ai-msg-text { background: linear-gradient(90deg,#0066ff,#0033aa); color: #fff }
+.ai-input { display:flex; gap:8px; padding: 10px; border-top: 1px solid rgba(255,255,255,0.04) }
+.ai-input input { flex:1; padding:8px 10px; border-radius: 8px; border:none; background: rgba(255,255,255,0.04); color:#fff }
+.ai-input button { width:40px; height:36px; border-radius:8px; border:none; background:#2e8eff; color:#fff }
+
+@media (max-width: 640px) {
+  .ai-panel { width: 280px }
+}

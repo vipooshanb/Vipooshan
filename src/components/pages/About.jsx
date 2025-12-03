@@ -1,6 +1,6 @@
 import React from "react";
-import "./About.css"; 
-import team1 from "../assets/team1.jpg"; 
+import "../styles/About.css"; 
+import team1 from "../../assets/team1.jpg"; 
 import { FaGraduationCap, FaMapMarkerAlt, FaUniversity, FaFlag } from "react-icons/fa";
 
 

@@ -17,7 +17,7 @@ import {
 } from "react-icons/fa";
 import { FaJava } from "react-icons/fa";
 
-import "./Education.css"; // Keep your existing CSS
+import "../styles/Education.css"; // Keep your existing CSS
 
 const educationData = [
   {
