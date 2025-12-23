@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Analytics } from "@vercel/analytics/react";
 import Hero from "./components/pages/Hero";
 import About from "./components/pages/About";
 import Projects from "./components/pages/Projects";
@@ -84,6 +85,7 @@ function App() {
       <Certifications />
       <Contact />
       <Footer />
+      <Analytics />
 
     </div>
   );
