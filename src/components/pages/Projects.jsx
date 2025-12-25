@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import "../styles/Projects.css"; // Assuming you have a CSS file for styling
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import ScrollReveal from "../utils/ScrollReveal";
 
 const categories = [
   { name: "All", value: "all" },
@@ -61,7 +62,7 @@ const projects = [
     title: "Mozhii.AI (Tamil LLM)",
     year: "2025 November",
     tech: "Next.js, TypeScript",
-    category: "Full-Stack web web-mobile",
+    category: "full-stack web web-mobile",
     bgColor: "#2a4d3f",
     description:
       "Landing page for Mozhii.AI, an AI assistant platform, built with Next.js and TypeScript for optimal performance and SEO.",
@@ -72,7 +73,7 @@ const projects = [
     title: "Mozhii.AI - Sri Lanka's Tamil Large Language Model",
     year: "2025 Ongoing...",
     tech: "Python, PyTorch, Transformers, FastAPI, QLoRA",
-    category: "Full-Stack web web-mobile",
+    category: "full-stack web web-mobile",
     bgColor: "#2a4d3f",
     description:
       "Landing page for Mozhii.AI, an AI assistant platform, built with Next.js and TypeScript for optimal performance and SEO.",
@@ -94,61 +95,64 @@ const Projects = () => {
   return (
     <section className="projects-section" id="projects">
       <div className="container">
-        <h2 className="section-title">My Projects</h2>
+        <ScrollReveal>
+          <h2 className="section-title">My Projects</h2>
 
-        <div className="category-filter">
-          {categories.map((cat) => (
-            <button
-              key={cat.value}
-              className={activeCategory === cat.value ? "active" : ""}
-              onClick={() => setActiveCategory(cat.value)}
-            >
-              {cat.name}
-            </button>
-          ))}
-        </div>
+          <div className="category-filter">
+            {categories.map((cat) => (
+              <button
+                key={cat.value}
+                className={activeCategory === cat.value ? "active" : ""}
+                onClick={() => setActiveCategory(cat.value)}
+              >
+                {cat.name}
+              </button>
+            ))}
+          </div>
+        </ScrollReveal>
 
         <div className="netflix-row">
           {filteredProjects.length === 0 ? (
             <p>No projects found in this category</p>
           ) : (
             filteredProjects.map((project, index) => (
-              <div
-                key={index}
-                className="netflix-card"
-                data-category={project.category}
-              >
+              <ScrollReveal key={index} className="netflix-card-wrapper">
                 <div
-                  className="card-bg"
-                  style={{ backgroundColor: project.bgColor }}
-                ></div>
-                <div className="card-content">
-                  <h3>{project.title}</h3>
-                  <div className="project-meta">
-                    <span className="year">{project.year}</span>
+                  className="netflix-card"
+                  data-category={project.category}
+                >
+                  <div
+                    className="card-bg"
+                    style={{ backgroundColor: project.bgColor }}
+                  ></div>
+                  <div className="card-content">
+                    <h3>{project.title}</h3>
+                    <div className="project-meta">
+                      <span className="year">{project.year}</span>
+                    </div>
+                    <div>
+                      <span className="tech">{project.tech}</span>
+                    </div>
+                    <p>{project.description}</p>
                   </div>
-                  <div>
-                    <span className="tech">{project.tech}</span>
-                  </div>
-                  <p>{project.description}</p>
-                </div>
 
-                <div className="card-actions">
+                  <div className="card-actions">
+                    <button
+                      onClick={() => window.open(project.github, "_blank")}
+                      title="View on GitHub"
+                    >
+                      <FaGithub />
+                    </button>
+                  </div>
+
                   <button
-                    onClick={() => window.open(project.github, "_blank")}
-                    title="View on GitHub"
+                    className="view-project-btn"
+                    onClick={() => window.open(project.live, "_blank")}
                   >
-                    <FaGithub />
+                    <FaExternalLinkAlt /> View Project
                   </button>
                 </div>
-
-                <button
-                  className="view-project-btn"
-                  onClick={() => window.open(project.live, "_blank")}
-                >
-                  <FaExternalLinkAlt /> View Project
-                </button>
-              </div>
+              </ScrollReveal>
             ))
           )}
         </div>

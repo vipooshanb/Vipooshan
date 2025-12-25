@@ -7,11 +7,13 @@ import Certifications from "./components/pages/Certifications";
 import Skills from "./components/pages/Skills";
 import Contact from "./components/pages/Contact";
 import Footer from "./components/pages/Footer";
+import SplashScreen from "./components/pages/SplashScreen";
 import "./Dark.css";  // Dark mode styles
 import "./Light.css"; // Light mode styles
 
 
 function App() {
+  const [loading, setLoading] = useState(true);
   const [darkMode, setDarkMode] = useState(true); // Default: dark mode
 
   // Add or remove body classes when mode changes
@@ -26,6 +28,10 @@ function App() {
   }, [darkMode]);
 
   const toggleMode = () => setDarkMode(!darkMode);
+
+  if (loading) {
+    return <SplashScreen onComplete={() => setLoading(false)} />;
+  }
 
   return (
     <div className="App">

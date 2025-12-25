@@ -21,6 +21,7 @@ import {
   SiFigma, 
   SiPostman 
 } from "react-icons/si";
+import ScrollReveal from "../utils/ScrollReveal";
 
 const Skills = () => {
   const skillCategories = [
@@ -65,61 +66,71 @@ const Skills = () => {
 
   return (
     <section className="skills-section" id="skills">
-      <h2 className="skills-title">Technical Skills</h2>
+      <ScrollReveal>
+        <h2 className="skills-title">Technical Skills</h2>
+      </ScrollReveal>
       
       <div className="skills-grid">
         {/* First Row: Frontend & Backend */}
         <div className="skills-row">
-          <div className="skill-category">
-            <h3 className="category-title">{skillCategories[0].title}</h3>
-            <div className="skills-container">
-              {skillCategories[0].skills.map((skill, index) => (
-                <div key={index} className="skill-card">
-                  <div className="skill-icon">{skill.icon}</div>
-                  <h4 className="skill-name">{skill.name}</h4>
-                </div>
-              ))}
+          <ScrollReveal className="skill-category-wrapper">
+            <div className="skill-category">
+              <h3 className="category-title">{skillCategories[0].title}</h3>
+              <div className="skills-container">
+                {skillCategories[0].skills.map((skill, index) => (
+                  <div key={index} className="skill-card">
+                    <div className="skill-icon">{skill.icon}</div>
+                    <h4 className="skill-name">{skill.name}</h4>
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
+          </ScrollReveal>
           
-          <div className="skill-category">
-            <h3 className="category-title">{skillCategories[1].title}</h3>
-            <div className="skills-container">
-              {skillCategories[1].skills.map((skill, index) => (
-                <div key={index} className="skill-card">
-                  <div className="skill-icon">{skill.icon}</div>
-                  <h4 className="skill-name">{skill.name}</h4>
-                </div>
-              ))}
+          <ScrollReveal className="skill-category-wrapper">
+            <div className="skill-category">
+              <h3 className="category-title">{skillCategories[1].title}</h3>
+              <div className="skills-container">
+                {skillCategories[1].skills.map((skill, index) => (
+                  <div key={index} className="skill-card">
+                    <div className="skill-icon">{skill.icon}</div>
+                    <h4 className="skill-name">{skill.name}</h4>
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
+          </ScrollReveal>
         </div>
         
         {/* Second Row: Database & Tools */}
         <div className="skills-row">
-          <div className="skill-category">
-            <h3 className="category-title">{skillCategories[2].title}</h3>
-            <div className="skills-container">
-              {skillCategories[2].skills.map((skill, index) => (
-                <div key={index} className="skill-card">
-                  <div className="skill-icon">{skill.icon}</div>
-                  <h4 className="skill-name">{skill.name}</h4>
-                </div>
-              ))}
+          <ScrollReveal className="skill-category-wrapper">
+            <div className="skill-category">
+              <h3 className="category-title">{skillCategories[2].title}</h3>
+              <div className="skills-container">
+                {skillCategories[2].skills.map((skill, index) => (
+                  <div key={index} className="skill-card">
+                    <div className="skill-icon">{skill.icon}</div>
+                    <h4 className="skill-name">{skill.name}</h4>
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
+          </ScrollReveal>
           
-          <div className="skill-category">
-            <h3 className="category-title">{skillCategories[3].title}</h3>
-            <div className="skills-container">
-              {skillCategories[3].skills.map((skill, index) => (
-                <div key={index} className="skill-card">
-                  <div className="skill-icon">{skill.icon}</div>
-                  <h4 className="skill-name">{skill.name}</h4>
-                </div>
-              ))}
+          <ScrollReveal className="skill-category-wrapper">
+            <div className="skill-category">
+              <h3 className="category-title">{skillCategories[3].title}</h3>
+              <div className="skills-container">
+                {skillCategories[3].skills.map((skill, index) => (
+                  <div key={index} className="skill-card">
+                    <div className="skill-icon">{skill.icon}</div>
+                    <h4 className="skill-name">{skill.name}</h4>
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
+          </ScrollReveal>
         </div>
       </div>
     </section>

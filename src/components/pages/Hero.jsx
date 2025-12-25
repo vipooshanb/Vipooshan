@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import "../styles/Hero.css"; // import the CSS
-import { FaLinkedinIn, FaGithub, FaInstagram} from "react-icons/fa";
+import { FaLinkedinIn, FaGithub, FaInstagram, FaDownload } from "react-icons/fa";
 import { FaChevronDown } from "react-icons/fa";
 import AiAssistant from "./AiAssistant";
+import CV from "../../assets/Vipooshan Balachandran.pdf";
 
 const Hero = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -14,6 +15,10 @@ const Hero = () => {
   return (
     <div className="portfolio">
       
+      {/* Animated Background */}
+      <div className="hero-background">
+        <div className="grid-lines"></div>
+      </div>
 
       <div className="container">
         {/* Navbar */}
@@ -65,9 +70,15 @@ const Hero = () => {
           <p>
             <span className="highlight">Computer Science Undergraduate</span>
           </p>
-          <a href="#contact" className="cta-button">
-            Contact Me
-          </a>
+          
+          <div className="hero-buttons">
+            <a href="#contact" className="cta-button">
+              Contact Me
+            </a>
+            <a href={CV} download="Vipooshan Balachandran.pdf" className="cta-button secondary">
+              <FaDownload style={{ marginRight: '8px' }} /> Download CV
+            </a>
+          </div>
 
         {/* Scroll Down */}
         <a href="#about" className="scroll-down">

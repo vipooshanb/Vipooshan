@@ -16,6 +16,7 @@ import {
   FaUsers 
 } from "react-icons/fa";
 import { FaJava } from "react-icons/fa";
+import ScrollReveal from "../utils/ScrollReveal";
 
 import "../styles/Education.css"; // Keep your existing CSS
 
@@ -63,35 +64,39 @@ const educationData = [
 const Education = () => {
   return (
     <section className="edu-section-alt" id="education">
-      <h2 className="edu-section-title">Education</h2>
+      <ScrollReveal>
+        <h2 className="edu-section-title">Education</h2>
+      </ScrollReveal>
       <div className="edu-cards-container">
         {educationData.map((edu, index) => (
-          <div key={index} className="edu-card">
-            <div className="edu-card-header">
-              <div className="edu-date">
-                <FaCalendarAlt /> {edu.date}
+          <ScrollReveal key={index} className="edu-card-wrapper">
+            <div className="edu-card">
+              <div className="edu-card-header">
+                <div className="edu-date">
+                  <FaCalendarAlt /> {edu.date}
+                </div>
+                <h3 className="edu-institution">{edu.institution}</h3>
+                <div className="edu-location">
+                  <FaMapMarkerAlt /> {edu.location}
+                </div>
               </div>
-              <h3 className="edu-institution">{edu.institution}</h3>
-              <div className="edu-location">
-                <FaMapMarkerAlt /> {edu.location}
+              <div className="edu-card-body">
+                <h4 className="edu-degree">{edu.degree}</h4>
+                <div className="edu-badge">Key Courses :- </div>
+                <div className="edu-courses-wrapper">
+                  {edu.courses.map((courseColumn, colIndex) => (
+                    <ul key={colIndex} className="edu-features-list">
+                      {courseColumn.map((course, idx) => (
+                        <li key={idx}>
+                          {course.icon} {course.text}
+                        </li>
+                      ))}
+                    </ul>
+                  ))}
+                </div>
               </div>
             </div>
-            <div className="edu-card-body">
-              <h4 className="edu-degree">{edu.degree}</h4>
-              <div className="edu-badge">Key Courses :- </div>
-              <div className="edu-courses-wrapper">
-                {edu.courses.map((courseColumn, colIndex) => (
-                  <ul key={colIndex} className="edu-features-list">
-                    {courseColumn.map((course, idx) => (
-                      <li key={idx}>
-                        {course.icon} {course.text}
-                      </li>
-                    ))}
-                  </ul>
-                ))}
-              </div>
-            </div>
-          </div>
+          </ScrollReveal>
         ))}
       </div>
     </section>

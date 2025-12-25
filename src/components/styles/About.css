@@ -1,9 +1,6 @@
 /* ---------------- About Section ---------------- */
 .about-section {
-    padding-left: 5%;
-    padding-right: 5%;
-    padding-top: 50px;
-    padding-bottom: 200px;
+    padding: 80px 5%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;

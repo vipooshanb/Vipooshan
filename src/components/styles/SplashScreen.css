@@ -1,0 +1,157 @@
+.splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    font-family: 'Courier New', Courier, monospace; /* Tech font */
+}
+
+.splash-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+}
+
+/* Terminal Window Dots */
+.terminal-header {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 10px;
+    opacity: 0.7;
+}
+
+.terminal-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.terminal-dot.red { background-color: #ff5f56; }
+.terminal-dot.yellow { background-color: #ffbd2e; }
+.terminal-dot.green { background-color: #27c93f; }
+
+/* Name Styling */
+.splash-name {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 2px;
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.prompt {
+    color: #0066ff;
+    margin-right: 15px;
+}
+
+.splash-name span {
+    opacity: 0;
+    display: inline-block;
+}
+
+.splash-name span.visible {
+    opacity: 1;
+}
+
+/* Blinking Cursor */
+.cursor {
+    display: inline-block;
+    width: 15px;
+    height: 4px;
+    background-color: #0066ff;
+    margin-left: 5px;
+    animation: blink 0.8s infinite;
+    opacity: 1 !important; /* Override hidden class */
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Loading Bar */
+.loading-bar-container {
+    width: 100%;
+    height: 6px;
+    background-color: #1a1a1a;
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5) inset;
+}
+
+.loading-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #0066ff, #00ccff);
+    width: 0%;
+    transition: width 0.02s linear;
+    position: relative;
+    box-shadow: 0 0 15px rgba(0, 102, 255, 0.6);
+}
+
+.loading-glare {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    animation: shimmer 1s infinite;
+}
+
+@keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+/* Boot Text */
+.boot-text {
+    font-size: 0.9rem;
+    color: #888;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.code-bracket {
+    color: #444;
+}
+
+.status-text {
+    color: #00ccff;
+    flex: 1;
+    margin: 0 10px;
+}
+
+.percentage {
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .splash-name {
+        font-size: 2rem;
+    }
+    .prompt {
+        margin-right: 8px;
+    }
+}

@@ -1,220 +1,281 @@
+/* Light Mode Theme */
 body.light {
-    background: linear-gradient(135deg, #f0f4ff 0%, #d9e4ff 100%);
-    color: black;
-    
-    .navbar{
-        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.532);
-    }
-    .nav-links a {
-        color: #000000;
-    }
-    .logo {
-        color: #000000;
-    }
-    .logo:hover {
-        text-shadow: 0 0 10px rgba(0, 0, 0, 0.604);
-    }
-    .hamburger span {
-        background-color: #000000;
-    }
-
-
-
-    .about-title {
-        color: #0033aa;
-    }
-    .about-text {
-        color: #343434;
-    }
-    .stat {
-        background: rgba(0, 0, 0, 0.897);
-    }
-    .stat:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 20px rgba(0, 102, 255, 0.715);
-    }
-    .section-title {
-        color: #0033aa;
-    }
-    .category-filter button {
-            color: rgb(255, 255, 255);
-            font-weight: 900;
-            background-color: rgba(0, 0, 0, 0.7);
-    }
-    .category-filter button:hover {
-        background-color: rgba(40, 40, 40, 0.9);
-        border-color: rgba(53, 9, 229, 0.889);
-        transform: translateY(-3px);
-        box-shadow: 0 10px 20px rgb(7, 0, 209);
-    }
-    .netflix-card {
-            background-color: rgba(0, 0, 0, 0.6);
-    }
-    .tech {
-        color: #ffffff;
-    }
-    .edu-card {
-        background: rgba(0, 0, 0, 0.614);
-    }
-    .edu-card-header {
-        background: linear-gradient(to right, #00000065, #0033aaa1);
-    }
-    .edu-degree {
-        color: #ffffff;
-    }
-    .edu-badge {
-        background: linear-gradient(to right, #000000ad, #0033aa9c);
-        color: #ffffff;
-    }
-    .edu-features-list li {
-        color: #ffffff;
-    }
-    .edu-section-title {
-        color: #0033aa;
-    }
-    .edu-section-title::after {
-        background: linear-gradient(to right, #0066ff, #0033aa);
-    }
-    .skills-title {
-        color: #0033aa;
-    }
-    .skills-title::after {
-        background: linear-gradient(to right, #0066ff, #0033aa);
-    }
-    .skill-card {
-        background: rgba(255, 255, 255, 0.6);
-        border: 1px solid rgba(0, 0, 0, 0.1);
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.766);
-        color: #000000;
-    }
-    .skill-card:hover {
-        border-color: rgba(6, 34, 213, 0.607);
-    }
-    
-    .skill-icon {
-        background: rgba(227, 228, 231, 0.897);
-    }
-    
-    .skill-name {
-        color: #000000;
-    }
-    .skill-card {
-        background: rgba(0, 0, 0, 0.353);
-    }
-    .skill-name {
-        color: #0400ff94;
-    }
-    .category-title {
-        color: #0d0d0d;
-    }
-
-
-    .cer-section-title {
-        color: #0033aa;
-    }
-    .cer-section-title::after {
-        background: linear-gradient(to right, #0066ff, #0033aa);
-    }
-    .certification-card {
-        background: rgba(31, 22, 22, 0.075);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.766);
-        color: #000000;
-    }
-    .certificate-title {
-        color: #0033aa;
-        font-weight: 700;
-    }
-    .certificate-issuer, .certificate-date {
-        color: #000000;
-        font-weight: 600;
-    }
-    .contact-title {
-        color: #0033aa;
-    }
-        .contact-text {
-            color: #000;
-            font-weight:bold;
-        }
-        .contact-details h4 {
-            color: #000;
-            font-weight: bold;
-        }
-        .contact-details p {
-            color: #0033aa;
-            font-weight: bold;
-        }
-        .contact-social a {
-            background: rgba(0, 0, 0, 0.1);
-            color: #000;
-        }
-        .contact-social a:hover {
-            background: #0066ff;
-            color: #fff;
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0, 100, 255, 0.4);
-        }
-        .form-group label {
-            color: #000000;
-        }
-        .contact-form {
-            background: rgba(255, 255, 255, 0.111);
-            border: 1px solid rgba(0, 0, 0, 0.1);
-            color: #000;
-        }
-        
-        .form-control {
-            width: 100%;
-            padding: 15px;
-            background: rgba(0, 0, 0, 0.05);
-            border: 1px solid rgba(0, 0, 0, 0.507);
-            border-radius: 10px;
-            color: #000000;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-        }
-        .footer-heading {
-            color: #0033aa;
-        }
-        .footer-text {
-            color: #000000;
-        }
-        .footer-social a {
-            background: rgba(0, 0, 0, 0.1);
-            color: #000000;
-        }
-        .footer-social a:hover {
-            background: #0066ff;
-            color: #fff;
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0, 100, 255, 0.4);
-        }
-        .footer-links a {
-            color: #000000;
-        }
-        .search-box {
-            background: rgba(31, 22, 22, 0.075);
-            border: 1px solid rgba(0, 0, 0, 0.205);
-        }
-        .search-box input {
-            background: transparent;
-            color: #000000;
-        }
-        .copyright {
-            color: #000000;
-        }
-        .footer-info {
-            color: #000000;
-        }
-
-
-
-
-
-
-
-
-
-
-
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    color: #333;
 }
 
+/* Navbar */
+body.light .navbar {
+    background: rgba(255, 255, 255, 0.85);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+body.light .logo {
+    color: #0033aa;
+}
+
+body.light .nav-links a {
+    color: #444;
+}
+
+body.light .nav-links a:hover {
+    color: #0066ff;
+}
+
+body.light .hamburger span {
+    background-color: #333;
+}
+
+/* Hero Section */
+body.light .hero h1 {
+    color: #111;
+    text-shadow: none;
+}
+
+body.light .hero p {
+    color: #555;
+}
+
+body.light .scroll-down {
+    color: #333;
+}
+
+/* About Section */
+body.light .about-title,
+body.light .section-title,
+body.light .edu-section-title,
+body.light .skills-title,
+body.light .cer-section-title,
+body.light .contact-title {
+    color: #0033aa;
+}
+
+body.light .about-text {
+    color: #444;
+}
+
+body.light .stat {
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+body.light .stat-number {
+    color: #111;
+}
+
+body.light .stat-text {
+    color: #666;
+}
+
+/* Projects Section */
+body.light .category-filter button {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #444;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+body.light .category-filter button.active,
+body.light .category-filter button:hover {
+    background-color: #0066ff;
+    color: white;
+    border-color: #0066ff;
+}
+
+body.light .netflix-card {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+body.light .netflix-card h3 {
+    color: #111;
+    text-shadow: none;
+}
+
+body.light .netflix-card p {
+    color: #555;
+}
+
+body.light .netflix-card .tech {
+    background-color: rgba(0, 0, 0, 0.05);
+    color: #444;
+}
+
+body.light .netflix-card .year {
+    background-color: rgba(0, 102, 255, 0.1);
+    color: #0066ff;
+    box-shadow: none;
+}
+
+/* Hover state for projects - keep text light when background becomes dark */
+body.light .netflix-card:hover h3,
+body.light .netflix-card:hover p,
+body.light .netflix-card:hover .tech {
+    color: white;
+}
+
+body.light .card-actions button {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #333;
+    border-color: rgba(0,0,0,0.1);
+}
+
+body.light .card-actions button:hover {
+    background-color: #0066ff;
+    color: white;
+}
+
+/* Education Section */
+body.light .edu-card {
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+body.light .edu-card-header {
+    background: linear-gradient(to right, rgba(0, 102, 255, 0.1), rgba(0, 51, 170, 0.1));
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+body.light .edu-institution {
+    color: #0033aa;
+}
+
+body.light .edu-degree {
+    color: #333;
+}
+
+body.light .edu-year, 
+body.light .edu-location {
+    color: #666;
+}
+
+body.light .edu-features-list li {
+    color: #555;
+}
+
+body.light .edu-badge {
+    background: rgba(0, 102, 255, 0.1);
+    color: #0066ff;
+}
+
+/* Skills Section */
+body.light .skill-category {
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+body.light .category-title {
+    color: #111;
+}
+
+body.light .skill-card {
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+body.light .skill-name {
+    color: #333;
+}
+
+body.light .skill-icon {
+    background: #f5f7fa;
+}
+
+/* Certifications Section */
+body.light .certification-card {
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+body.light .certificate-title {
+    color: #111;
+}
+
+body.light .certificate-issuer,
+body.light .certificate-date {
+    color: #666;
+}
+
+/* Contact Section */
+body.light .contact-form {
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+body.light .form-group label {
+    color: #333;
+}
+
+body.light .form-control {
+    background: #f9f9f9;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    color: #333;
+}
+
+body.light .form-control:focus {
+    background: #fff;
+    border-color: #0066ff;
+}
+
+body.light .contact-info-item h3 {
+    color: #111;
+}
+
+body.light .contact-info-item p {
+    color: #555;
+}
+
+body.light .contact-social a {
+    background: rgba(0, 0, 0, 0.05);
+    color: #333;
+    border-color: rgba(0, 0, 0, 0.1);
+}
+
+body.light .contact-social a:hover {
+    background: #0066ff;
+    color: white;
+}
+
+/* Footer */
+body.light .footer {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    background: linear-gradient(to bottom, rgba(255,255,255,0.5), rgba(255,255,255,0.9));
+}
+
+body.light .footer-heading {
+    color: #0033aa;
+}
+
+body.light .footer-text,
+body.light .footer-links li a,
+body.light .footer-info div,
+body.light .copyright {
+    color: #555;
+}
+
+body.light .footer-social a {
+    background: rgba(0, 0, 0, 0.05);
+    color: #333;
+}
+
+body.light .footer-social a:hover {
+    background: #0066ff;
+    color: white;
+}
+
+body.light .search-box input {
+    background: rgba(0, 0, 0, 0.05);
+    color: #333;
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+body.light .search-box button {
+    color: #333;
+}

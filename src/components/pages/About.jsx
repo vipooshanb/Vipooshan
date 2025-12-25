@@ -2,11 +2,13 @@ import React from "react";
 import "../styles/About.css"; 
 import team1 from "../../assets/team1.jpg"; 
 import { FaGraduationCap, FaMapMarkerAlt, FaUniversity, FaFlag } from "react-icons/fa";
+import ScrollReveal from "../utils/ScrollReveal";
 
 
 const About = () => {
   return (
     <section className="about-section" id="about">
+      <ScrollReveal>
       {/* Profile Circle */}
       <div className="profile-circle">
         <div className="circle">
@@ -24,9 +26,10 @@ const About = () => {
           </div>
         </div>
       </div>
+      </ScrollReveal>
 
       {/* About Content */}
-      <div className="about-content">
+      <ScrollReveal className="about-content">
         <h2 className="about-title">About Me</h2>
         <p className="about-text">
           I'm a passionate Computer Science undergraduate with expertise in
@@ -83,7 +86,7 @@ const About = () => {
             Get In Touch
           </a>
         </div>
-      </div>
+      </ScrollReveal>
     </section>
   );
 };
