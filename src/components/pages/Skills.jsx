@@ -43,7 +43,6 @@ const Skills = () => {
         { name: "Python", icon: <FaPython /> },
         { name: "Java", icon: <FaJava /> },
         { name: "Node.js", icon: <SiNodedotjs /> },
-        { name: "Express.js", icon: <SiExpress /> }
       ]
     },
     {
@@ -58,7 +57,6 @@ const Skills = () => {
       skills: [
         { name: "Git", icon: <FaGitAlt /> },
         { name: "GitHub", icon: <FaGithub /> },
-        { name: "Docker", icon: <FaDocker /> },
         { name: "Postman", icon: <SiPostman /> }
       ]
     }

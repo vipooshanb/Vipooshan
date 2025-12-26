@@ -59,24 +59,13 @@ const projects = [
     live: "#",
   },
   {
-    title: "Mozhii.AI (Tamil LLM)",
-    year: "2025 November",
-    tech: "Next.js, TypeScript",
-    category: "full-stack web web-mobile",
-    bgColor: "#2a4d3f",
-    description:
-      "Landing page for Mozhii.AI, an AI assistant platform, built with Next.js and TypeScript for optimal performance and SEO.",
-    github: "https://github.com/Mozhii-LLM/Mozhii",
-    live: "https://www.mozhii.online",
-  },
-  {
     title: "Mozhii.AI - Sri Lanka's Tamil Large Language Model",
     year: "2025 Ongoing...",
-    tech: "Python, PyTorch, Transformers, FastAPI, QLoRA",
+    tech: "Python, TensorFlow",
     category: "full-stack web web-mobile",
     bgColor: "#2a4d3f",
     description:
-      "Landing page for Mozhii.AI, an AI assistant platform, built with Next.js and TypeScript for optimal performance and SEO.",
+       "Building a Tamil-centric LLM system with an interactive chat interface, focusing on natural language understanding, response generation, and localization for Tamil users.",
     github: "https://github.com/Mozhii-LLM/Mozhii",
     live: "https://www.mozhii.online",
   },

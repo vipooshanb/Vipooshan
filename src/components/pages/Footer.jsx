@@ -1,8 +1,10 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "../styles/Footer.css"; // Fixed path to the CSS file
-import { FaLinkedinIn, FaGithub, FaInstagram, FaCloudSun, FaSearch } from "react-icons/fa";
+import { FaLinkedinIn, FaGithub, FaInstagram, FaCloudSun, FaSearch, FaEye } from "react-icons/fa";
 
 const Footer = () => {
+  const [viewCount, setViewCount] = useState(null);
+
   useEffect(() => {
     // Function to update time and date
     const updateDateTime = () => {
@@ -26,6 +28,19 @@ const Footer = () => {
 
     updateDateTime();
     const timer = setInterval(updateDateTime, 60000);
+
+    // Fetch page views
+    const fetchViews = async () => {
+      try {
+        const response = await fetch("https://api.counterapi.dev/v1/vipooshan-portfolio/visits/up");
+        const data = await response.json();
+        setViewCount(data.count);
+      } catch (error) {
+        console.error("Error fetching page views:", error);
+      }
+    };
+    
+    fetchViews();
 
     return () => clearInterval(timer);
   }, []);
@@ -83,6 +98,12 @@ const Footer = () => {
             <FaCloudSun />
             <span>26°C Sunny</span>
           </div>
+          {viewCount !== null && (
+            <div className="view-count" title="Total Page Views">
+              <FaEye />
+              <span>{viewCount} Views</span>
+            </div>
+          )}
           <div>EN</div>
           <div className="footer-time">12:01 AM</div>
           <div className="footer-date">9/14/2025</div>

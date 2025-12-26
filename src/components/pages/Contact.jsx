@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import axios from "axios";
+import React, { useState, useRef } from "react";
+import emailjs from "@emailjs/browser";
 import {
   FaMapMarkerAlt,
   FaEnvelope,
@@ -13,6 +13,7 @@ import "../styles/Contact.css";
 import ScrollReveal from "../utils/ScrollReveal";
 
 const Contact = () => {
+  const form = useRef();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -27,26 +28,35 @@ const Contact = () => {
     setFormData({ ...formData, [e.target.id]: e.target.value });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     setStatus("Sending...");
 
-    try {
-  // Use Vite environment variable for backend URL (VITE_BACKEND_URL)
-  // Fallback to empty string so requests go to the same origin when not set
-  const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || "";
-      const res = await axios.post(`${BACKEND_URL}/send`, formData);
+    // Replace these with your actual EmailJS Service ID, Template ID, and Public Key
+    // You can sign up at https://www.emailjs.com/
+    const SERVICE_ID = "service_rf8pufc";
+    const TEMPLATE_ID = "template_j9ywvha";
+    const PUBLIC_KEY = "m9jH94QBzSn5CaMIW";
 
-      if (res.data.success) {
-        setStatus("Message sent successfully!");
-        setFormData({ name: "", email: "", subject: "", message: "", phone: "" });
-      } else {
-        setStatus("Failed to send message. Try again.");
-      }
-    } catch (err) {
-      console.error(err);
-      setStatus("Error sending message. Check console for details.");
-    }
+    emailjs
+      .sendForm(
+        SERVICE_ID,
+        TEMPLATE_ID,
+        form.current,
+        {
+          publicKey: PUBLIC_KEY,
+        }
+      )
+      .then(
+        () => {
+          setStatus("Message sent successfully!");
+          setFormData({ name: "", email: "", subject: "", message: "", phone: "" });
+        },
+        (error) => {
+          console.error("FAILED...", error.text);
+          setStatus("Failed to send message. Try again.");
+        }
+      );
   };
 
   return (
@@ -96,12 +106,13 @@ const Contact = () => {
         {/* Right Side - Contact Form */}
         <ScrollReveal className="contact-form-wrapper">
           <div className="contact-form">
-            <form onSubmit={handleSubmit}>
+            <form ref={form} onSubmit={handleSubmit}>
               <div className="form-group">
                 <label htmlFor="name">Your Name</label>
                 <input
                   type="text"
                   id="name"
+                  name="name"
                   className="form-control"
                   placeholder="Enter your name"
                   value={formData.name}
@@ -115,6 +126,7 @@ const Contact = () => {
                 <input
                   type="email"
                   id="email"
+                  name="email"
                   className="form-control"
                   placeholder="Enter your email"
                   value={formData.email}
@@ -128,6 +140,7 @@ const Contact = () => {
                 <input
                   type="text"
                   id="subject"
+                  name="subject"
                   className="form-control"
                   placeholder="Enter subject"
                   value={formData.subject}
@@ -140,6 +153,7 @@ const Contact = () => {
                 <label htmlFor="message">Your Message</label>
                 <textarea
                   id="message"
+                  name="message"
                   className="form-control"
                   placeholder="Enter your message"
                   value={formData.message}
@@ -153,6 +167,7 @@ const Contact = () => {
                 <input
                   type="text"
                   id="phone"
+                  name="phone"
                   className="form-control"
                   placeholder="Enter phone number with country code, e.g. +94771234567"
                   value={formData.phone}

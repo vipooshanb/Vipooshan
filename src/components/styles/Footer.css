@@ -130,7 +130,8 @@
             font-size: 0.9rem;
         }
         
-        .weather-info {
+        .weather-info,
+        .view-count {
             display: flex;
             align-items: center;
             gap: 5px;
